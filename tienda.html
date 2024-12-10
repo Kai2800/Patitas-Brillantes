@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Artículos para Gatos</title>
+    <link rel="icon" href="C:\Users\Kitzia\.vscode\Primera Prueba\pngegg.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif; 
+            background-color: #F4F4F9;
+            color: #333;
+        }
+
+        header {
+            background-color: #555;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 10px;
+            background-image: url('https://www.latercera.com/resizer/v2/RAG2GMTRTND2PKCCJJ3CAGK4U4.png?quality=80&smart=true&auth=8110b8942ca28e5bb203256fce649e88da7f472c0e830976c8dad0864ebd674c&width=1200&height=712');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero a:hover {
+            background-color: #555;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 15px;
+            width: 250px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            padding: 0 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .product-card .price {
+            font-size: 1.5rem;
+            color: #FF6F61;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            background-color: #FF6F61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .product-card button:hover {
+            background-color: #ff4b41;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #FF6F61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <b>Tienda Oficial de Patitas Brillantes</b>
+</header>
+
+<nav>
+    <div class="dropdown-content">
+    <a href="index.html"> Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="comentarios.html">Contacto</a>
+</div>
+</nav>
+
+<section class="hero" >
+    <h1>¡Los mejores artículos para consentir a tu gato!</h1>
+    <p>Encuentra juguetes, camas, rascadores y todo lo que tu gato necesita para ser feliz.</p> <p>Asi ayudas a nuestra organizacion a crecer cada dia mas.</p>
+    <a href="#productos">Ver Productos</a>
+</section>
+
+<section class="product-container" id="productos">
+    <div class="product-card">
+        <img src="https://i5.walmartimages.com/asr/06ecd048-8154-4c92-a494-36d14fc221e2.d444d156133e4334c5676e84317b9736.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Juguete para gato">
+        <h3>Pack de Juguetes Interactivos</h3>
+        <p>22 Juguetes diseñados para mantener a tu gato activo y feliz.</p>
+        <p class="price">$199 MXN</p>
+        <button>Agregar al Carrito</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_654687-MLV71210058316_082023-O.webp" alt="Cama para gato">
+        <h3>Cama Cueva</h3>
+        <p>La cama más cómoda y acogedora para tu felino favorito.</p>
+        <p class="price">$499 MXN</p>
+        <button>Agregar al Carrito</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://cdn1.coppel.com/images/catalog/mkp/2019/3000/20191067-1.jpg" alt="Rascador para gato">
+        <h3>Rascador de Lujo</h3>
+        <p>Un elegante rascador que combina estilo y funcionalidad.</p>
+        <p class="price">$799 MXN</p>
+        <button>Agregar al Carrito</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://media.admagazine.com/photos/618a5df458ac69e38abb5d04/master/w_1600%2Cc_limit/92756.png" alt="Accesorios para gatos">
+        <h3>Mochila para Gatos</h3>
+        <p>Lleva a tu amigo felino a todas partes con esta practica mochila.</p>
+        <p class="price">$699 MXN</p>
+        <button>Agregar al Carrito</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Patitas Brillantes. Todos los derechos reservados.</p>
+    <p>¿Preguntas? <a href="comentarios.html" target="_blank">Contáctanos</a></p>
+</footer>
+
+</body>
+</html>
