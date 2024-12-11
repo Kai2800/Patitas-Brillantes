@@ -16,6 +16,7 @@
             font-family: 'Arial', sans-serif;
             background-color: #F4F4F9;
             color: #333;
+            font-size: 16px;
         }
 
         header {
@@ -26,11 +27,24 @@
             font-size: 2rem;
         }
 
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #555;
             padding: 10px 0;
+        }
+
+        .nav-links {
+            display: flex;
         }
 
         nav a {
@@ -41,10 +55,9 @@
         }
 
         nav a:hover {
-            text-decoration: underline
-            ;
-            
+            text-decoration: underline;
         }
+
 
         .hero {
             text-align: center;
@@ -79,109 +92,42 @@
             background-color: #ff4b41;
         }
 
-        .about {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #fff;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .services {
-            background-color: #F4F4F9;
+        .about, .services, .testimonials, .faq {
             padding: 50px 20px;
             text-align: center;
         }
 
-        .service-card {
-            display: inline-block;
-            width: 30%;
-            margin: 20px;
-            padding: 20px;
+        .service-card, .testimonial-card {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: 0.3s;
+            margin: 20px;
+            padding: 10px;
         }
 
-        .service-card:hover {
+        p{
+            text-align: justify;
+            margin: 10px;
+            
+        }
+
+
+        .service-card:hover, .testimonial-card:hover {
             transform: scale(1.05);
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
         }
 
         .testimonials {
             padding: 50px 20px;
             background-color: #FF6F61;
-            color: #fff;
+           
         }
-
-        .testimonials h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-card {
-            display: inline-block;
-            width: 30%;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            color: #333;
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-
-        .faq {
-            padding: 50px 20px;
-            background-color: #F4F4F9;
-        }
-
-        .faq h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .faq-item p {
-            color: #555;
-            font-size: 0.9rem;
-        }
-
+ 
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px 0;
-        }
-
-        footer p {
-            font-size: 0.9rem;
         }
 
         footer a {
@@ -193,17 +139,52 @@
             text-decoration: underline;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 1024px) {
+            .service-card, .testimonial-card {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            
+
+            .hero h1 {
+                font-size: 1rem;
+            }
+
+            .service-card, .testimonial-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .about p {
+                font-size: 0.9rem;
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <header>
+    <button class="menu-toggle">&#9776;</button>
     <b>Patitas Brillantes</b>
 </header>
 
 <nav>
-    <a href="comentarios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
+    <div class="nav-links">
+        <a href="comentarios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+    </div>
 </nav>
 
 <section class="hero" id="inicio">
@@ -216,48 +197,52 @@
 
         A través de nuestra tienda online, ofrecemos una variedad de productos cuyos beneficios se destinan directamente a financiar nuestros programas de rescate y cuidado animal. Desde ropa y accesorios hasta alimentos y suministros para mascotas, cada compra contribuye a nuestra causa y nos permite continuar con nuestra labor. Además, nuestra tienda es una plataforma donde los voluntarios pueden inscribirse y apoyar nuestras actividades, ya sea mediante donaciones o participando en nuestros eventos y campañas.
         
-        En Patitas Brillantes, creemos en un mundo donde todos los animales callejeros sean respetados, protegidos y amados. Tu apoyo es esencial para lograrlo. ¡Únete a nosotros y forma parte del cambio positivo para estos animales! </p>
+        En Patitas Brillantes, creemos en un mundo donde todos los animales callejeros sean respetados, protegidos y amados. Tu apoyo es esencial para lograrlo. ¡Únete a nosotros y forma parte del cambio positivo para estos animales!</p>
 </section>
 
 <section class="services" id="servicios">
     <h1>Nuestro camino</h1>
     <div class="service-card">
-        <h3>Mision</h3>
+        <h3>Misión</h3>
         <p>Promover el bienestar, la protección y la dignidad de los gatos callejeros mediante la adopción responsable, la esterilización, la atención médica y la educación comunitaria. Nos esforzamos por crear un mundo donde cada gato tenga un hogar seguro y amoroso. Y donde todos los animales callejeros sean respetados.</p>
     </div>
     <div class="service-card">
-        <h3>Vision</h3>
+        <h3>Visión</h3>
         <p>Ser una organización reconocida por su impacto en la reducción de la población de gatos callejeros y por inspirar una cultura de respeto y empatía hacia todos los animales. Aspiramos a un futuro en el que la convivencia armónica entre humanos y animales sea una realidad en cada comunidad.</p>
     </div>
-    <div class="service-card">
+        <div class="service-card">
         <h3>Logros Cumplidos</h3>
         <p>Hemos logrado encontrar hogares amorosos para más de 500 gatos callejeros. Realización de 10 campañas masivas de esterilización, beneficiando a más de 1,000 gatos de la calle. Asi mismo, brindamos atención médica gratuita a 300 gatos rescatados, incluyendo vacunación, desparasitación y tratamiento de enfermedades.</p>
     </div>
+    
 </section>
 
 <section class="testimonials" id="testimonios">
     <h2>Ultimas Noticias Sobre Nosotros</h2>
     <div class="testimonial-card">
-        <h3>"Gatitos con Futuro Encuentra Hogar para 100 Gatos en Solo 1 Mes"</h3> <br>
+        <h3>"Gatitos con Futuro Encuentra Hogar para 100 Gatos en Solo 1 Mes"</h3>
+        
         <p>Gracias a una campaña masiva de adopción, la ONG logró que 100 gatos callejeros encontraran familias amorosas. “Es un hito para nosotros”, comentó la directora, destacando la respuesta positiva de la comunidad.</p>
-        <br><p>12/10/2022</p>
+    <i><p>12/10/2022</p></i>
     </div>
     <div class="testimonial-card">
-        <h3>"Exitosa Jornada de Esterilización: Más de 200 Gatos Callejeros Atendidos"</h3> <br>
+        <h3>"Exitosa Jornada de Esterilización: Más de 200 Gatos Callejeros Atendidos"</h3> 
         <p>Con el apoyo de veterinarios voluntarios, la ONG esterilizó a 200 gatos en un solo fin de semana. La medida busca reducir la población callejera y prevenir el abandono de felinos.</p>
-        <br><p>25/04/2023</p>
+        <i><p>25/04/2023</p></i>
     </div>
     <div class="testimonial-card">
-        <h3>"Niños Aprenden a Cuidar Gatos en Taller Educativo de 'Gatitos con Futuro'"</h3> <br>
+        <h3>"Niños Aprenden a Cuidar Gatos en Taller Educativo de 'Gatitos con Futuro'"</h3> 
         <p>La ONG impartió talleres de empatía y cuidado animal en escuelas primarias, enseñando a más de 500 estudiantes la importancia del respeto hacia los gatos callejeros.</p>
-        <br><p>17/10/2024</p>
+        <i><p>17/10/2024</p></i>
     </div>
 </section>
 
+
 <footer>
-    <p>© 2024 Tienda para Gatos Felices. Todos los derechos reservados.</p>
-    <p>¿Preguntas? <a href="#contacto">Contáctanos</a></p>
+    <p>© 2024 Patitas Brillantes. Todos los derechos reservados.</p>
+    <p>¿Preguntas? <a href="comentarios.html">Contáctanos</a></p>
 </footer>
+
 
 </body>
 </html>
